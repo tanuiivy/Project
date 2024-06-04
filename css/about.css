@@ -1,0 +1,54 @@
+.about-us {
+    padding: 20px;
+    background-color: #fff;
+    margin: 20px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+.about-us h1, .about-us h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.intro, .story, .values, .testimonials,  .call-to-action {
+    margin-bottom: 40px;
+}
+
+.values ul {
+    list-style-type: none;
+    padding: 0;
+    text-align: center;
+}
+
+.values ul li {
+    margin: 10px 0;
+}
+
+.testimonials blockquote {
+    font-style: italic;
+    text-align: center;
+}
+
+.testimonials cite {
+    display: block;
+    margin-top: 10px;
+}
+
+
+.call-to-action {
+    text-align: center;
+}
+
+.call-to-action .btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #967259;;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 4px;
+}
+
+.call-to-action .btn:hover {
+    background-color: burlywood;
+}

@@ -24,7 +24,7 @@ nav a{
     text-decoration: none;
     display: flex;
     align-items: center;
-    color: black;
+    color: white;
 }
 nav a:hover{
     background-color: white;
@@ -43,7 +43,7 @@ nav  ul li ul{
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 nav{
-    background-color: grey;
+    background-color: #967259;
     box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.1);
     overflow: hidden;
 }
@@ -66,7 +66,7 @@ nav a{
     color: black;
 }
 nav a:hover{
-    background-color: white;
+    background-color: #ece0d1;
 }
 nav  ul li ul{
     position: absolute;
@@ -94,11 +94,10 @@ footer{
     font-size: 22px;
     padding: 10px 0 ;
     width: 100%;
-    background-color: grey;
+    background-color:#967259;
 }
 .logo {
     height: auto;
     width: 50px;
     margin-right: auto;
 }
-
