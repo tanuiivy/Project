@@ -39,8 +39,8 @@
         <div class="call-to-action">
             <h2>Visit Us</h2>
             <p>Come experience the perfect blend of coffee and productivity at Bean & Brain Cafe.<br> Follow us on social media or contact us for more information.</p>
-            <a href="contact.html" class="btn">Contact Us</a>
-        </div>
+            <a href="contact.php" class="btn">Contact Us</a>
+</div>
     </section>
     <?php include_once("template/footer.php"); ?>
 </body>
