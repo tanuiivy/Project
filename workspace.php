@@ -4,27 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bean & Brain Cafe</title>
-    <link rel="stylesheet" href="/css/main.css">
-    <link rel="stylesheet" href="/css/workspace.css">
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="workspace.css">
 </head>
 <body>
-    <header>
-        <nav>
-            <ul>
-                <div class="logo">
-                    <a href="#"><img src="images/logo.png" alt="logo" class="nav-icon"></a>
-                </div>
-                <li><a href="home.html">HOME</a></li>
-                <li><a href="about.html">ABOUT US</a></li>
-                <li><a href="menu.html">MENU</a></li>
-                <li><a href="workspace.html">WORKSPACE</a></li>
-                <li><a href="events.html">EVENTS</a></li>
-                <li><a href="locations.html">LOCATIONS</a></li>
-                <li><a href="products.html">PRODUCTS</a></li>
-                <li><a href="contact.html">CONTACT US</a></li>
-            </ul>
-        </nav>
-    </header>
+<?php include_once("template/nav.php"); ?>
+
     <h1>WORKSPACE</h1>
     <div class="container">
         <div class="content-section">
@@ -72,3 +57,4 @@
     
 </body>
 </html>
+
