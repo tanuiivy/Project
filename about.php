@@ -42,5 +42,6 @@
             <a href="contact.html" class="btn">Contact Us</a>
         </div>
     </section>
+    <?php include_once("template/footer.php"); ?>
 </body>
 </html>

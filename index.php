@@ -9,8 +9,6 @@
 <body>
     <?php include_once("template/nav.php"); ?>
     </header>
-    <footer>
-        <h2>&copy;Copyright Reserved.</h2>
-    </footer>
+    <?php include_once("template/footer.php"); ?>
 </body>
 </html>
