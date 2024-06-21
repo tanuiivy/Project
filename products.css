@@ -6,15 +6,6 @@ h1 {
     color: #333;
 }
 
-.product-container {
-    width: 80%;
-    margin: 0 auto;
-    padding: 20px;
-    background-color: #fff;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
-    border-radius: 8px;
-}
-
 .product-table {
     width: 100%;
     border-collapse: collapse;
@@ -37,7 +28,7 @@ h1 {
 }
 
 .product-table tbody tr:hover {
-    background-color: #f1f1f1; 
+    background-color: #f1f1f1; /* Add hover effect */
     transition: background-color 0.3s;
 }
 
@@ -46,7 +37,7 @@ h1 {
 }
 
 .buy-btn {
-    background-color: #967259;
+    background-color: #333;
     color: white;
     border: none;
     padding: 8px 12px;
@@ -56,6 +47,7 @@ h1 {
 }
 
 .buy-btn:hover {
-    background-color: #a0522d;
+    background-color: #967259;
 }
+
 

@@ -24,7 +24,8 @@ $insert_message = "INSERT INTO messages
 VALUES ('$fullname' ,'$mail', '$subject', '$message')";
 
 if ($conn->query( $insert_message) === TRUE) {
-echo "New record created successfully";
+   header("Location:view_messages.php");
+   exit();
 } else {
 echo "Error: " . $insert_message . "<br>" . $conn->error;
 }
@@ -32,14 +33,8 @@ echo "Error: " . $insert_message . "<br>" . $conn->error;
 ?>
 
 <section id="contact">
-    <h2>CONTACT US</h2>
-    <p>We'd love to hear from you! Please reach us through the following contact details.</p>
-    <div class="contact-details">
-        <p><strong>Address:</strong> 123 Cafe Street, Coffee Town, CT 12345</p>
-        <p><strong>Phone:</strong> (254) 722-897462</p>
-        <p><strong>Email:</strong> contact@bnbcafe.com</p>
-    </div><br>
-    <p>You can also contact us by filling in the form below.</p>
+    
+    <h1>Talk to us.</h1>
     
     <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
         <label for="fullname">Full Name:</label>
@@ -53,6 +48,7 @@ echo "Error: " . $insert_message . "<br>" . $conn->error;
             <option value="">Select Subject</option>
             <option value="Price Inquiries">Price Inquiries</option>
             <option value="Feedback">Feedback</option>
+            <option value="Other">Other</option>
         </select><br>
 
         <label for="message">Message:</label>
@@ -63,4 +59,5 @@ echo "Error: " . $insert_message . "<br>" . $conn->error;
 </section>
 
 </body>
+<?php include_once("template/footer.php"); ?>
 </html>

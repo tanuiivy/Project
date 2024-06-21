@@ -10,7 +10,7 @@
 <body>
     <?php include_once("template/nav.php"); ?>
 <h1>Our Coffee Products</h1>
-    <div class="product-container">
+    <div >
         <table class="product-table">
             <thead>
                 <tr>
