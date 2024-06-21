@@ -40,6 +40,7 @@ echo "Error: " . $insert_message . "<br>" . $conn->error;
         <p><strong>Email:</strong> contact@bnbcafe.com</p>
     </div><br>
     <p>You can also contact us by filling in the form below.</p>
+    
     <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
         <label for="fullname">Full Name:</label>
         <input type="text" id="fullname" name="fullname" required><br>
