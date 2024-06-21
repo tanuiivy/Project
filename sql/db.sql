@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jun 20, 2024 at 04:01 PM
+-- Generation Time: Jun 21, 2024 at 10:56 AM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -18,11 +18,10 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `cafe`
+-- Database: `cafedb`
 --
-DROP DATABASE IF EXISTS `cafe`;
-CREATE DATABASE IF NOT EXISTS `cafe` DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci;
-USE `cafe`;
+CREATE DATABASE IF NOT EXISTS `cafedb` DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci;
+USE `cafedb`;
 
 -- --------------------------------------------------------
 
@@ -30,6 +29,7 @@ USE `cafe`;
 -- Table structure for table `employees`
 --
 
+DROP TABLE IF EXISTS `employees`;
 CREATE TABLE `employees` (
   `employeeID` bigint(10) NOT NULL,
   `userame` varchar(50) NOT NULL DEFAULT '',
@@ -47,6 +47,7 @@ CREATE TABLE `employees` (
 -- Table structure for table `gender`
 --
 
+DROP TABLE IF EXISTS `gender`;
 CREATE TABLE `gender` (
   `genderID` tinyint(1) NOT NULL,
   `gender` varchar(50) NOT NULL DEFAULT '',
@@ -59,9 +60,9 @@ CREATE TABLE `gender` (
 --
 
 INSERT INTO `gender` (`genderID`, `gender`, `datecreated`, `dateupdated`) VALUES
-(1, 'Female', '2024-06-20 15:53:35', '2024-06-20 15:53:35'),
-(2, 'Male', '2024-06-20 15:53:35', '2024-06-20 15:53:35'),
-(3, 'Rather not say', '2024-06-20 15:53:35', '2024-06-20 15:53:35');
+(0, 'Female', '2024-06-21 11:34:44', '2024-06-21 11:34:44'),
+(0, 'Male', '2024-06-21 11:34:44', '2024-06-21 11:34:44'),
+(0, 'Rather not say', '2024-06-21 11:34:44', '2024-06-21 11:34:44');
 
 -- --------------------------------------------------------
 
@@ -69,6 +70,7 @@ INSERT INTO `gender` (`genderID`, `gender`, `datecreated`, `dateupdated`) VALUES
 -- Table structure for table `messages`
 --
 
+DROP TABLE IF EXISTS `messages`;
 CREATE TABLE `messages` (
   `messageID` bigint(10) NOT NULL,
   `sender_name` varchar(50) NOT NULL DEFAULT '',
@@ -80,51 +82,12 @@ CREATE TABLE `messages` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Indexes for dumped tables
+-- Dumping data for table `messages`
 --
 
---
--- Indexes for table `employees`
---
-ALTER TABLE `employees`
-  ADD PRIMARY KEY (`employeeID`),
-  ADD UNIQUE KEY `email` (`email`),
-  ADD UNIQUE KEY `roleID` (`roleID`);
-
---
--- Indexes for table `gender`
---
-ALTER TABLE `gender`
-  ADD PRIMARY KEY (`genderID`),
-  ADD UNIQUE KEY `gender` (`gender`);
-
---
--- Indexes for table `messages`
---
-ALTER TABLE `messages`
-  ADD PRIMARY KEY (`messageID`);
-
---
--- AUTO_INCREMENT for dumped tables
---
-
---
--- AUTO_INCREMENT for table `employees`
---
-ALTER TABLE `employees`
-  MODIFY `employeeID` bigint(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
-
---
--- AUTO_INCREMENT for table `gender`
---
-ALTER TABLE `gender`
-  MODIFY `genderID` tinyint(1) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
-
---
--- AUTO_INCREMENT for table `messages`
---
-ALTER TABLE `messages`
-  MODIFY `messageID` bigint(10) NOT NULL AUTO_INCREMENT;
+INSERT INTO `messages` (`messageID`, `sender_name`, `sender_email`, `subject_line`, `text_message`, `datecreated`, `dateupdated`) VALUES
+(0, 'Ivy Tanui', 'ivycherop0@gmail.com', 'Feedback', 'Great prices', '2024-06-21 11:48:23', '2024-06-21 11:48:23'),
+(0, 'James Mwendwa', 'jmwendwa1@gmail.com', 'Price Inquiries', 'How much does the meeting room cost?', '2024-06-21 11:49:31', '2024-06-21 11:49:31');
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
