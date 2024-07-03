@@ -14,10 +14,10 @@ require_once("includes/db_connect.php");
 include_once("template/nav.php");
 
 if(isset($_POST["send_message"])){
-    $fullname = msqli_real_escape_string($conn, $_POST["fullname"]);
-    $mail =msqli_real_escape_string($conn, $_POST["email_address"]);
-    $subject =msqli_real_escape_string($conn, $_POST["subject_line"]);
-    $message =msqli_real_escape_string($conn, $_POST["message"]);
+    $fullname = mysqli_real_escape_string($conn, $_POST["fullname"]);
+    $mail = mysqli_real_escape_string($conn, $_POST["email_address"]);
+    $subject = mysqli_real_escape_string($conn, $_POST["subject_line"]);
+    $message = mysqli_real_escape_string($conn, $_POST["message"]);
 
 $insert_message = "INSERT INTO messages
 (sender_name, sender_email, subject_line, text_message)

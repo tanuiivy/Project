@@ -14,17 +14,20 @@ require_once("includes/db_connect.php");
 
 // Check if DelID is set for deletion
 if (isset($_GET["DelID"])) {
-    $DelID = $_GET["DelID"];
+    $DelID = intval($_GET["DelID"]); // Ensure DelID is an integer
+    echo "Deleting message with ID: $DelID<br>"; // Debug output
     // SQL to delete a record
     $del_mes = "DELETE FROM messages WHERE messageID = $DelID LIMIT 1";
 
     if ($conn->query($del_mes) === TRUE) {
+        echo "Record with ID $DelID deleted successfully.<br>"; // Debug output
         header("Location: view_messages.php");
         exit();
     } else {
         echo "Error deleting record: " . $conn->error;
     }
 }
+
 
 // Select messages
 $select_msg = "SELECT * FROM messages ORDER BY datecreated DESC";
@@ -58,7 +61,7 @@ if ($sel_msg_res->num_rows > 0) {
                 <td><?php echo "<strong>" . $sel_msg_row["subject_line"] . '</strong> - ' . substr($sel_msg_row["text_message"], 0, 20) . '....'; ?></td>
                 <td><?php echo date("d-M-Y H:i", strtotime($sel_msg_row["datecreated"])); ?></td>
                 <td>[<a href="edit_msg.php?messageID=<?php echo $sel_msg_row["messageID"]; ?>">Edit</a>]
-                    [<a href="view_messages.php?DelID=<?php echo $sel_msg_row["messageID"]; ?>">Del</a>]</td>
+                    [<a href="view_messages.php?DelID=<?php echo $sel_msg_row["messageID"]; ?>"<a href=" "onclick="return confirm('This message will be deleted permanetly.Are you sure?')" >Delete</a>]</td>
             </tr>
 <?php
     }
