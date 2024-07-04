@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bean & Brain Cafe</title>
-    <link rel="stylesheet" href="main.css">
-    <link rel="stylesheet" href="workspace.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/workspace.css">
 </head>
 <body>
 <?php include_once("template/nav.php"); ?>
