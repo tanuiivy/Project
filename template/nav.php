@@ -8,7 +8,6 @@
                 <li><a href="menu.php">MENU</a></li>
                 <li><a href="workspace.php">WORKSPACE</a></li>
                 <li><a href="events.php">EVENTS</a></li>
-                <li><a href="locations.php">LOCATIONS</a></li>
                 <li><a href="products.php">PRODUCTS</a></li>
                 <li><a href="view_messages.php">VIEW MESSAGES</a></li>
                 <li><a href="contact.php">CONTACT US</a></li>

@@ -1,31 +1,58 @@
-.menu {
-    padding: 20px;
-    background-color: #fff;
-    margin: 20px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+#menu-container {
+    padding: 2em;
+    max-width: 800px;
+    margin: auto;
 }
 
-.menu h1 {
+#menu-container h2 {
+    color: #444;
+    font-size: 2em;
     text-align: center;
-    margin-bottom: 20px;
+    margin-bottom: 0.5em;
 }
 
-.menu-section {
-    margin-bottom: 40px;
-}
-
-.menu-section h2 {
+#menu-container h3 {
+    color: #666;
+    font-size: 1.5em;
+    margin-bottom: 1em;
     text-align: center;
-    margin-bottom: 20px;
 }
 
-.menu-section ul {
-    list-style-type: none;
+#menu-container .menu-section {
+    margin-bottom: 2em;
+}
+
+#menu-container .menu-section h3 {
+    border-bottom: 2px solid #e3c17b;
+    padding-bottom: 0.5em;
+}
+
+#menu-container ul {
+    list-style: none;
     padding: 0;
+}
+
+#menu-container li {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.5em 0;
+    border-bottom: 1px solid #e3c17b;
+}
+
+#menu-container li span:first-child {
+    font-weight: bold;
+}
+
+#menu-container li span:last-child {
+    color: #999;
+}
+
+#menu-container .syrups {
+    color: #777;
+    font-style: italic;
+    margin-top: 0.5em;
     text-align: center;
 }
 
-.menu-section ul li {
-    margin: 10px 0;
-    font-size: 18px;
-}
+
+
