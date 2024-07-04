@@ -58,3 +58,7 @@ button[type="submit"] {
 button[type="submit"]:hover {
     background-color: #555;
 }
+.error_form{
+    color:crimson;
+    font-size: small;
+}

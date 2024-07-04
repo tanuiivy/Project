@@ -37,11 +37,11 @@ echo "Error: " . $insert_message . "<br>" . $conn->error;
     <h1>Talk to us.</h1>
     
     <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
-        <label for="fullname">Full Name:</label>
-        <input type="text" id="fullname" name="fullname" required><br>
+        <label for="fullname">FullName:</label>
+        <input type="text" id="fullname"  placeholder="Fullname"  name="fullname" maxlength="50" required autofocus required><br>
 
         <label for="email_address">Email:</label>
-        <input type="email" id="email_address" name="email_address" required><br>
+        <input type="email" id="email_address" placeholder="Email Address" name="email_address" required><br>
 
         <label for="subject_line">Subject:</label>
         <select name="subject_line" id="sl" required>
