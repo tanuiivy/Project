@@ -16,7 +16,7 @@
                 <div class="col">
                     <h1>BEAN AND BRAIN CAFE</h1>
                     <p>WELCOME</p>
-                    <button type="button">EXPLORE</button>
+                    <a href="about.php"><button type="button">EXPLORE</button></a>
                 </div>
             
         </div>

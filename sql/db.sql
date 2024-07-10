@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jun 21, 2024 at 10:59 AM
+-- Generation Time: Jul 10, 2024 at 01:51 PM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -32,7 +32,7 @@ USE `cafedb`;
 DROP TABLE IF EXISTS `employees`;
 CREATE TABLE `employees` (
   `employeeID` bigint(10) NOT NULL,
-  `userame` varchar(50) NOT NULL DEFAULT '',
+  `username` varchar(50) NOT NULL DEFAULT '',
   `email` varchar(50) NOT NULL DEFAULT '',
   `password` varchar(50) DEFAULT NULL,
   `roleID` tinyint(1) NOT NULL DEFAULT 0,
@@ -55,15 +55,6 @@ CREATE TABLE `gender` (
   `dateupdated` datetime DEFAULT current_timestamp() ON UPDATE current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
---
--- Dumping data for table `gender`
---
-
-INSERT INTO `gender` (`genderID`, `gender`, `datecreated`, `dateupdated`) VALUES
-(0, 'Female', '2024-06-21 11:34:44', '2024-06-21 11:34:44'),
-(0, 'Male', '2024-06-21 11:34:44', '2024-06-21 11:34:44'),
-(0, 'Rather not say', '2024-06-21 11:34:44', '2024-06-21 11:34:44');
-
 -- --------------------------------------------------------
 
 --
@@ -82,12 +73,48 @@ CREATE TABLE `messages` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Dumping data for table `messages`
+-- Indexes for dumped tables
 --
 
-INSERT INTO `messages` (`messageID`, `sender_name`, `sender_email`, `subject_line`, `text_message`, `datecreated`, `dateupdated`) VALUES
-(0, 'Ivy Tanui', 'ivycherop0@gmail.com', 'Feedback', 'Great prices', '2024-06-21 11:48:23', '2024-06-21 11:48:23'),
-(0, 'James Mwendwa', 'jmwendwa1@gmail.com', 'Price Inquiries', 'How much does the meeting room cost?', '2024-06-21 11:49:31', '2024-06-21 11:49:31');
+--
+-- Indexes for table `employees`
+--
+ALTER TABLE `employees`
+  ADD PRIMARY KEY (`employeeID`);
+
+--
+-- Indexes for table `gender`
+--
+ALTER TABLE `gender`
+  ADD PRIMARY KEY (`genderID`);
+
+--
+-- Indexes for table `messages`
+--
+ALTER TABLE `messages`
+  ADD PRIMARY KEY (`messageID`);
+
+--
+-- AUTO_INCREMENT for dumped tables
+--
+
+--
+-- AUTO_INCREMENT for table `employees`
+--
+ALTER TABLE `employees`
+  MODIFY `employeeID` bigint(10) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT for table `gender`
+--
+ALTER TABLE `gender`
+  MODIFY `genderID` tinyint(1) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT for table `messages`
+--
+ALTER TABLE `messages`
+  MODIFY `messageID` bigint(10) NOT NULL AUTO_INCREMENT;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

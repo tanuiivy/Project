@@ -88,10 +88,11 @@ if(!isset($_SESSION["error"])){
             }
             ?>
         </select>
-        <button type="submit" name="signup">Sign Up</button>
+        <button type="submit" name="send_message">Send Message</button>
     </form>
 </section>
 
 </body>
 <?php include_once("template/footer.php"); ?>
 </html>
+
