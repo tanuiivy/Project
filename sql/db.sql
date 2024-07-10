@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jul 10, 2024 at 01:51 PM
+-- Generation Time: Jul 10, 2024 at 06:07 PM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -20,8 +20,6 @@ SET time_zone = "+00:00";
 --
 -- Database: `cafedb`
 --
-CREATE DATABASE IF NOT EXISTS `cafedb` DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci;
-USE `cafedb`;
 
 -- --------------------------------------------------------
 
@@ -29,7 +27,6 @@ USE `cafedb`;
 -- Table structure for table `employees`
 --
 
-DROP TABLE IF EXISTS `employees`;
 CREATE TABLE `employees` (
   `employeeID` bigint(10) NOT NULL,
   `username` varchar(50) NOT NULL DEFAULT '',
@@ -47,7 +44,6 @@ CREATE TABLE `employees` (
 -- Table structure for table `gender`
 --
 
-DROP TABLE IF EXISTS `gender`;
 CREATE TABLE `gender` (
   `genderID` tinyint(1) NOT NULL,
   `gender` varchar(50) NOT NULL DEFAULT '',
@@ -55,13 +51,21 @@ CREATE TABLE `gender` (
   `dateupdated` datetime DEFAULT current_timestamp() ON UPDATE current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
+--
+-- Dumping data for table `gender`
+--
+
+INSERT INTO `gender` (`genderID`, `gender`, `datecreated`, `dateupdated`) VALUES
+(1, 'male', '2024-07-10 19:06:47', '2024-07-10 19:06:47'),
+(2, 'female', '2024-07-10 19:06:47', '2024-07-10 19:06:47'),
+(3, 'rather not say', '2024-07-10 19:06:47', '2024-07-10 19:06:47');
+
 -- --------------------------------------------------------
 
 --
 -- Table structure for table `messages`
 --
 
-DROP TABLE IF EXISTS `messages`;
 CREATE TABLE `messages` (
   `messageID` bigint(10) NOT NULL,
   `sender_name` varchar(50) NOT NULL DEFAULT '',
@@ -71,6 +75,15 @@ CREATE TABLE `messages` (
   `datecreated` datetime DEFAULT current_timestamp(),
   `dateupdated` datetime DEFAULT current_timestamp() ON UPDATE current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `messages`
+--
+
+INSERT INTO `messages` (`messageID`, `sender_name`, `sender_email`, `subject_line`, `text_message`, `datecreated`, `dateupdated`) VALUES
+(1, 'Ivy Tanui', 'ivycherop0@gmail.com', 'Price Inquiries', 'How much for the meeting room for 50 people?\r\n', '2024-07-10 14:52:05', '2024-07-10 14:52:05'),
+(2, 'Hillary Kamau', 'hkamau2@yahoo.com', 'Feedback', 'Great service! Would highly recommend', '2024-07-10 14:52:32', '2024-07-10 14:52:32'),
+(3, 'Stacy Tallam', 'stallam@gmail.com', 'Other', 'Am i able to bring my products for display at the coffee shop?', '2024-07-10 14:53:34', '2024-07-10 14:53:34');
 
 --
 -- Indexes for dumped tables
@@ -108,13 +121,13 @@ ALTER TABLE `employees`
 -- AUTO_INCREMENT for table `gender`
 --
 ALTER TABLE `gender`
-  MODIFY `genderID` tinyint(1) NOT NULL AUTO_INCREMENT;
+  MODIFY `genderID` tinyint(1) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `messages`
 --
 ALTER TABLE `messages`
-  MODIFY `messageID` bigint(10) NOT NULL AUTO_INCREMENT;
+  MODIFY `messageID` bigint(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

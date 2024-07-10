@@ -1,3 +1,5 @@
-<footer>
-        <h2>&copy;Copyright Reserved.</h2>
-    </footer>
+<footer class="footer">
+    <div class="footer-content">
+        <p>© Copyright Reserved.</p>
+    </div>
+</footer>

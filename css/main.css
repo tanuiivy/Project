@@ -41,15 +41,22 @@ nav a:hover {
 }
 
 /* Footer Styles */
-footer {
-    position: absolute;
-    bottom: 0;
+.footer {
+    background-color: #8B5E3C; /* Adjust the color as needed */
+    color: white;
     text-align: center;
-    font-size: 22px;
-    padding: 10px 0;
+    padding: 20px 0;
+    position: fixed;
+    bottom: 0;
     width: 100%;
-    background-color: #967259;
+    font-size: 16px;
 }
+
+.footer-content {
+    margin: 0 auto;
+    max-width: 1200px;
+}
+
 
 /* Logo Styles */
 .logo {
